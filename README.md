@@ -1,34 +1,63 @@
-This repository contains a README file sample for Daytona Samples and the MIT License.
+# Spring Boot Bank Project with Daytona
 
-It can be used as a template to create sample repositories that can be added into [Daytona](https://github.com/daytonaio/daytona).
-
-Once you finish your sample and it gets merged, you can open a PR in the Daytona repo and submit the sample into the [index file](https://github.com/daytonaio/daytona/blob/main/hack/samples/index.json).
-
-# Sample <LANGUAGE/FRAMEWORK>
-
-Sample description
-
----
+This repository contains a sample bank application built using Spring Boot. The project demonstrates basic banking functionalities such as account creation, deposit, and withdrawal. It is pre-configured with a `devcontainer.json` file to enable a standardized development environment using Daytona.
 
 ## 🚀 Getting Started  
 
 ### Open Using Daytona  
 
-1. **Install Daytona**: Follow the [Daytona installation guide](https://www.daytona.io/docs/installation/installation/).  
+1. **Install Daytona**:  
+   Follow the [Daytona installation guide](https://www.daytona.io/docs/installation/installation/).  
+
 2. **Create the Workspace**:  
    ```bash  
-   daytona create <SAMPLE_REPO_URL> 
-   ```  
+   daytona create https://github.com/harshsinghcs/SpingBoot-BankProject-withDaytona.git
 
-... MORE STEPS IF NEEDED ...
+3. **Reopen in Container**:
 
-4. **Start the Application**:  
-   ```bash  
-   command to start the app
-   ```  
+   If using VS Code, you will be prompted to reopen the project in the dev container.
 
----
+4. **Start the Application**:
+   Build and run the Spring Boot application:
+   ```bash
+   mvn spring-boot:run
+   
+✨ Features
 
-## ✨ Features  
+Account Creation: Create a new bank account via REST API.
+Deposit: Deposit money into an account.
+Withdrawal: Withdraw money from an account.
+Pre-configured Dev Container: Develop in a consistent environment using Daytona and VS Code.
+Java 17 Support: The project uses Java 17 as the runtime.
 
-List of sample features (e.g. realtime chat app, standardized development environment with devcontainers)
+
+## 🛠️ API Endpoints  
+
+| HTTP Method | Endpoint                     | Description                   |
+|-------------|------------------------------|-------------------------------|
+| `POST`      | `/api/accounts`              | Create a new account          |
+| `GET`       | `/api/accounts/{id}`         | Retrieve account details      |
+| `POST`      | `/api/accounts/{id}/deposit` | Deposit money into an account |
+| `POST`      | `/api/accounts/{id}/withdraw`| Withdraw money from an account|
+
+
+## 📂 Project Structure  
+
+```plaintext
+src/
+├── main/
+│   ├── java/com/bankchor/
+│   │   ├── controller/       # REST Controller
+│   │   ├── entity/           # JPA Entity
+│   │   ├── service/          # Business Logic
+│   │   ├── repository/       # Data Access Layer
+│   ├── resources/
+│       ├── application.properties # Configuration
+
+
+
+## 🔗 Resources  
+
+- [Spring Boot Documentation](https://spring.io/projects/spring-boot)  
+- [Daytona Documentation](https://www.daytona.io/docs/)  
+- [Maven Documentation](https://maven.apache.org/guides/index.html)  
