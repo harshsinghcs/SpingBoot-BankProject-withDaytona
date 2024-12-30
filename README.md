@@ -2,6 +2,9 @@
 
 This repository contains a sample bank application built using Spring Boot. The project demonstrates basic banking functionalities such as account creation, deposit, and withdrawal. It is pre-configured with a `devcontainer.json` file to enable a standardized development environment using Daytona.
 
+### My Blog :-
+[Integrating Daytona into Your Spring Boot Bank Application](https://dev.to/harshsinghcs/integrating-daytona-into-your-spring-boot-bank-application-312o)
+
 ## 🚀 Getting Started  
 
 ### Open Using Daytona  
@@ -54,7 +57,7 @@ src/
 │   ├── resources/
 │       ├── application.properties # Configuration
 
-
+```
 
 ## 🔗 Resources  
 
